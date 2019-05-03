@@ -45,7 +45,7 @@
     "dist": "npm run tsc ;rollup -c",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tsc": "tsc -p ."
+    "tsc": "tsc -p tsconfig.prod.json"
   },
   "eslintConfig": {
     "extends": "react-app"

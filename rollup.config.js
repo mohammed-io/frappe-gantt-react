@@ -9,7 +9,7 @@ import svgr from "@svgr/rollup";
 import { terser } from "rollup-plugin-terser";
 
 export default {
-  input: "./index.js",
+  input: "./src/main.ts",
   output: [
     {
       file: "./dist/frappe-gantt.cjs.js",
