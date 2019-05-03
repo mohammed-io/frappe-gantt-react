@@ -1,22 +1,51 @@
 {
   "name": "frappe-gantt-react",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.2.0",
+  "license": "MIT",
+  "main": "index.js",
+  "typings": "./typings/FrappeGantt.d.ts",
+  "author": {
+    "name": "Mohammed Abdulkereem",
+    "email": "mohammed-io@outlook.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohammed-io/frappe-gantt-react"
+  },
+  "bugs": {
+    "url": "https://github.com/mohammed-io/frappe-gantt-react/issues"
+  },
+  "keywords": [
+    "react",
+    "frappe gantt wrapper",
+    "gantt",
+    "svg",
+    "simple gantt",
+    "project timeline",
+    "interactive gantt",
+    "project management"
+  ],
   "dependencies": {
     "@types/jest": "24.0.12",
     "@types/node": "11.13.9",
     "@types/react": "16.8.15",
     "@types/react-dom": "16.8.4",
+    "frappe-gantt": "^0.3.0",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0",
+    "rollup-plugin-sass": "^1.2.2",
     "typescript": "3.4.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "dist": "npm run tsc ;rollup -c",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tsc": "tsc -p ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,5 +61,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "@svgr/rollup": "^4.2.0",
+    "parcel-bundler": "^1.12.3",
+    "rollup": "^1.11.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-url": "^2.2.1"
   }
 }

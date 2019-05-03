@@ -1,44 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frappé Gantt React Wrapper
 
-## Available Scripts
+It's a React Component, a Wrapper for the awesome [Gantt chart library](https://github.com/frappe/gantt) from Frappé
 
-In the project directory, you can run:
+For the live demo, you can check their live demo [here](https://frappe.github.io/gantt/)
 
-### `npm start`
+## Install
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> npm install frappe-gantt-react
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+or
 
-### `npm test`
+> yarn add frappe-gantt-react
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+Import it to your project
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Using ES6 modules
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+`import { FrappeGantt } from 'frappe-gantt-react`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Or using CommonJS
 
-### `npm run eject`
+`const { FrappeGantt } = require('frappe-gantt-react')`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Then you can use it in your react app:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`
+class App extends React.Component {
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    ...
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    render() {
 
-## Learn More
+        return (
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+            ...
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+            <FrappeGantt tasks={ ... }>
+
+            ...
+
+        )
+
+    }
+
+}
+`
+
+## The API
+
+### The component `props`
+
+|      Property      | Description                                                                                         |
+| :----------------: | :-------------------------------------------------------------------------------------------------- |
+|      `tasks`       | Accepts array of class `Task`                                                                       |
+|  `onTasksChange`   | Accepts a `(tasks: Task[]) => void`, where `tasks` is the new copy —manipulated— of array of tasks  |
+|     `onClick`      | Accepts a `(task: Task) => void`, where `task` is the clicked task                                  |
+|   `onDateChange`   | Accepts a `(task: Task, start: Moment, end: Moment) => void`, both start and end are Moment objects |
+| `onProgressChange` | Accepts a `(task: Task, progress: number) => void`                                                  |
+|   `onViewChange`   | Accepts a `(mode: ViewMode) => void`                                                                |
