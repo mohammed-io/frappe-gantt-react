@@ -17,8 +17,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
-require("./App.css");
 var FrappeGantt_1 = require("./FrappeGantt");
+var ViewMode_1 = require("./ViewMode");
 var tasks = [
     {
         id: "Task 1",
@@ -49,7 +49,7 @@ var App = /** @class */ (function (_super) {
     __extends(App, _super);
     function App() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.state = { mode: FrappeGantt_1.ViewMode.Month };
+        _this.state = { mode: ViewMode_1.ViewMode.Month };
         return _this;
     }
     App.prototype.componentDidMount = function () {
@@ -57,10 +57,10 @@ var App = /** @class */ (function (_super) {
         console.log("test");
         setTimeout(function () {
             console.log("Setting State!");
-            _this.setState({ mode: FrappeGantt_1.ViewMode.Week });
+            _this.setState({ mode: ViewMode_1.ViewMode.Week });
             setTimeout(function () {
                 console.log("Setting State!");
-                _this.setState({ mode: FrappeGantt_1.ViewMode.HalfDay });
+                _this.setState({ mode: ViewMode_1.ViewMode.HalfDay });
             }, 3000);
         }, 3000);
     };

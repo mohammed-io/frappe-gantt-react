@@ -25,46 +25,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importStar(require("react"));
 var frappe_gantt_1 = __importDefault(require("frappe-gantt"));
-var Task = /** @class */ (function () {
-    function Task(options) {
-        if (options === void 0) { options = {}; }
-        this._dependencies = [];
-        this.id = "";
-        this.name = "";
-        this.start = "";
-        this.end = "";
-        /**
-         * Progress in percentage
-         */
-        this.progress = 0;
-        Object.assign(this, options);
-    }
-    Task.prototype.setDependencies = function (value) {
-        this._dependencies = value;
-    };
-    Object.defineProperty(Task.prototype, "dependencies", {
-        get: function () {
-            return this._dependencies.join(", ");
-        },
-        set: function (value) {
-            this._dependencies = value.split(",").map(function (d) { return d.trim(); });
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return Task;
-}());
-exports.Task = Task;
-var ViewMode;
-(function (ViewMode) {
-    ViewMode["QuarterDay"] = "Quarter Day";
-    ViewMode["HalfDay"] = "Half Day";
-    ViewMode["Day"] = "Day";
-    ViewMode["Week"] = "Week";
-    ViewMode["Month"] = "Month";
-})(ViewMode = exports.ViewMode || (exports.ViewMode = {}));
+var ViewMode_1 = require("./ViewMode");
 var frappeGanttDefaultProps = {
-    viewMode: ViewMode.Day,
+    viewMode: ViewMode_1.ViewMode.Day,
     onTasksChange: function (tasks) { },
     onClick: function (task) { },
     onDateChange: function (task, start, end) { },

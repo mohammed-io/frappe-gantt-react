@@ -1,6 +1,8 @@
 import React from "react";
 
-import { FrappeGantt, Task, ViewMode } from "./FrappeGantt";
+import { FrappeGantt } from "./FrappeGantt";
+import { Task } from "./Task";
+import { ViewMode } from "./ViewMode";
 
 const tasks = [
   {
