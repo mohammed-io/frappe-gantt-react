@@ -1,6 +1,6 @@
 {
   "name": "frappe-gantt-react",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "license": "MIT",
   "main": "./index.js",
   "types": "./typings/main.d.ts",

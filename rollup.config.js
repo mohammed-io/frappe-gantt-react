@@ -17,8 +17,17 @@ export default {
     },
     {
       file: "./dist/frappe-gantt.umd.js",
-      name: "Gantt",
+      name: "FrappeGanttReact",
       format: "umd",
+      globals: {
+        react: "React",
+        "frappe-gantt": "Gantt"
+      }
+    },
+    {
+      file: "./dist/frappe-gantt.iife.js",
+      name: "FrappeGanttReact",
+      format: "iife",
       globals: {
         react: "React",
         "frappe-gantt": "Gantt"
