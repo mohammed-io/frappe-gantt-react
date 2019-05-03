@@ -21,7 +21,7 @@ export default {
       format: "umd",
       globals: {
         react: "React",
-        "frappe-gantt": "Grantt"
+        "frappe-gantt": "Gantt"
       }
     }
   ],
