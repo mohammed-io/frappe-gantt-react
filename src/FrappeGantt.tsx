@@ -27,23 +27,26 @@ export class FrappeGantt extends React.Component<FrappeGanttProps, any> {
   static defaultProps = frappeGanttDefaultProps;
 
   state = {
-    viewMode: null
+    viewMode: null,
+    tasks: []
   };
 
   static getDerivedStateFromProps(nextProps: FrappeGanttProps, state: any) {
     return {
-      viewMode: nextProps.viewMode
+      viewMode: nextProps.viewMode,
+      tasks: nextProps.tasks.map(t => new Task(t))
     };
   }
 
   componentDidUpdate() {
     if (this._gantt) {
+      this._gantt.refresh(this.state.tasks);
       this._gantt.change_view_mode(this.state.viewMode);
     }
   }
 
   componentDidMount() {
-    this._gantt = new Gantt(this._svg.current, this.props.tasks, {
+    this._gantt = new Gantt(this._svg.current, this.state.tasks, {
       on_click: this.props.onClick,
       on_view_change: this.props.onViewChange,
       on_progress_change: (task: Task, progress: number) => {
