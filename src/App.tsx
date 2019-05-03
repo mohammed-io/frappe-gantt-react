@@ -52,7 +52,14 @@ class App extends React.Component<any, any> {
   render() {
     return (
       <div>
-        <FrappeGantt tasks={tasks} viewMode={this.state.mode} />
+        <FrappeGantt
+          tasks={tasks}
+          viewMode={this.state.mode}
+          onClick={task => console.log(task)}
+          onDateChange={(task, start, end) => console.log(task, start, end)}
+          onProgressChange={(task, progress) => console.log(task, progress)}
+          onTasksChange={tasks => console.log(tasks)}
+        />
       </div>
     );
   }

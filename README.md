@@ -26,27 +26,31 @@ Or using CommonJS
 
 Then you can use it in your react app:
 
-`
-class App extends React.Component {
-
-    ...
-
-    render() {
-
-        return (
+        class App extends React.Component {
 
             ...
 
-            <FrappeGantt tasks={ ... }>
+            render() {
 
-            ...
+                return (
+                    ...
+                    <div>
+                        <FrappeGantt
+                        tasks={tasks}
+                        viewMode={this.state.mode}
+                        onClick={task => console.log(task)}
+                        onDateChange={(task, start, end) => console.log(task, start, end)}
+                        onProgressChange={(task, progress) => console.log(task, progress)}
+                        onTasksChange={tasks => console.log(tasks)}
+                        />
+                    </div>
+                    ...
 
-        )
+                )
 
-    }
+            }
 
-}
-`
+        }
 
 ## The API
 
