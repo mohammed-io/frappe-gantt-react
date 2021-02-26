@@ -1,19 +1,19 @@
 {
-  "name": "frappe-gantt-react",
+  "name": "wdo-gantt-react",
   "version": "0.2.2",
   "license": "MIT",
   "main": "./index.js",
   "types": "./typings/main.d.ts",
   "author": {
-    "name": "Mohammed Abdulkereem",
-    "email": "mohammed-io@outlook.com"
+    "name": "wweeddoo",
+    "email": "tech-support@wweeddoo.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mohammed-io/frappe-gantt-react"
+    "url": "https://github.com/wweeddooPublic/wdo-gantt-react"
   },
   "bugs": {
-    "url": "https://github.com/mohammed-io/frappe-gantt-react/issues"
+    "url": "https://github.com/wweeddooPublic/wdo-gantt-react/issues"
   },
   "keywords": [
     "react",
@@ -26,7 +26,7 @@
     "project management"
   ],
   "dependencies": {
-    "frappe-gantt": "^0.3.0",
+    "wdo-gantt": "^0.5.0",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
