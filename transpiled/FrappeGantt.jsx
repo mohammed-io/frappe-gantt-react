@@ -24,7 +24,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importStar(require("react"));
-var frappe_gantt_1 = __importDefault(require("frappe-gantt"));
+var frappe_gantt_1 = __importDefault(require("wdo-gantt"));
 var ViewMode_1 = require("./ViewMode");
 var frappeGanttDefaultProps = {
     viewMode: ViewMode_1.ViewMode.Day,

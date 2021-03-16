@@ -1,1 +1,1 @@
-declare module "frappe-gantt";
+declare module "wdo-gantt";
