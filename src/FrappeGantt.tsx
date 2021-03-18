@@ -12,11 +12,12 @@ export type FrappeGanttOptionalProps = Readonly<typeof frappeGanttDefaultProps>;
 
 const frappeGanttDefaultProps = {
   viewMode: ViewMode.Day,
-  onTasksChange: (tasks: Task[]) => {},
-  onClick: (task: Task) => {},
-  onDateChange: (task: Task, start: Moment, end: Moment) => {},
-  onProgressChange: (task: Task, progress: number) => {},
-  onViewChange: (mode: ViewMode) => {}
+  public: false,
+  onTasksChange: (tasks: Task[]) => { },
+  onClick: (task: Task) => { },
+  onDateChange: (task: Task, start: Moment, end: Moment) => { },
+  onProgressChange: (task: Task, progress: number) => { },
+  onViewChange: (mode: ViewMode) => { }
 };
 
 export class FrappeGantt extends React.Component<FrappeGanttProps, any> {
@@ -70,13 +71,25 @@ export class FrappeGantt extends React.Component<FrappeGanttProps, any> {
   render() {
     return (
       <div style={{ overflow: "scroll" }} ref={this._target}>
-        <svg
-          ref={this._svg}
-          width="100%"
-          height="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-        />
+        {
+          this.props.public ?
+            <svg
+              style={{ pointerEvents: 'none' }}
+              ref={this._svg}
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            />
+            :
+            <svg
+              ref={this._svg}
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            />
+        }
       </div>
     );
   }
