@@ -94,3 +94,5 @@ export class FrappeGantt extends React.Component<FrappeGanttProps, any> {
     );
   }
 }
+
+export default FrappeGantt;

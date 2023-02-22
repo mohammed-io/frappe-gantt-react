@@ -47,3 +47,5 @@ export class Task {
     return this._dependencies;
   }
 }
+
+export default Task;

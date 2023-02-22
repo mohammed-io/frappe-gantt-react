@@ -5,3 +5,5 @@ export enum ViewMode {
   Week = "Week",
   Month = "Month"
 }
+
+export default ViewMode;
